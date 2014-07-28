@@ -10,15 +10,15 @@ This module allows for you to define links inside any template that will always 
 Example Template For Display Backup Account Links On A Template 
 (Below code specifically for new 5.0 'Default' top navigation bar)
 
-{if is_array($backuplinks)}
-<ul>
-	<li class="menu">
-		<a href="#" class="menu" style="color:limegreen">Backup Users</a>
-		<ul class="menu-dropdown">
-		{foreach from=$backuplinks key=username item=link}
-			<li><a href="{$link}">{$username}</a></li>
-		{/foreach}
-		</ul>
-	</li>
-</ul>
-{/if}
+	{if is_array($backuplinks)}
+	<ul>
+		<li class="menu">
+			<a href="#" class="menu" style="color:limegreen">Backup Users</a>
+			<ul class="menu-dropdown">
+			{foreach from=$backuplinks key=username item=link}
+				<li><a href="{$link}">{$username}</a></li>
+			{/foreach}
+			</ul>
+		</li>
+	</ul>
+	{/if}
